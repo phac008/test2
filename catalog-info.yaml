@@ -1,12 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "test2"
-  description: "test2"
+  name: harbortest
+  title: harbortest
+  description: |
+    test
   annotations:
-    github.com/project-slug: undefined/undefined
-    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: suxess-it/kubriX
+    backstage.io/techdocs-ref: url:https://github.com/suxess-it/kubriX/tree/main/backstage-resources
+    backstage.io/kubernetes-namespace: backstage
+    backstage.io/kubernetes-id: backstage-database
+    goharbor.io/repository-slug: test/test
 spec:
-  type: documentation
-  lifecycle: experimental
-  owner: "group:default/backstage"
+  type: service
+  system: sx-harbor
+  owner: sx-authors
+  lifecycle: production
